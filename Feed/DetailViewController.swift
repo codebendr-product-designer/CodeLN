@@ -19,11 +19,21 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         if let photo = photo {
-          //  let url = URL(string: photo.url)
-            img.image = UIImage(contentsOfFile: photo.url)
+            
+            Photos.download(url: (URL(string:photo.url) ?? nil)!) {
+                image, error in
+                
+                if error == nil {
+                    DispatchQueue.main.async {
+                        self.img.image = image
+                    }
+                }
+            }
             label.text = photo.title
         }
         
     }
     
 }
+
+

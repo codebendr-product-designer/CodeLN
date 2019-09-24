@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var label: UILabel!
     
@@ -17,14 +17,22 @@ class TableViewCell: UITableViewCell {
         img.image = .none
         label.text = .none
     }
-
+    
     var photo: Photos? {
         didSet {
             if let photo = photo {
-                img.image = UIImage(contentsOfFile: photo.thumbnailUrl)
+                Photos.download(url: (URL(string:photo.thumbnailUrl) ?? nil)!) {
+                    image, error in
+                    
+                    if error == nil {
+                        DispatchQueue.main.async {
+                            self.img.image = image
+                        }
+                    }
+                }
                 label.text = photo.title
             }
         }
     }
-
+    
 }
