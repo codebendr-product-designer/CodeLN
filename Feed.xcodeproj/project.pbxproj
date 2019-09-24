@@ -13,7 +13,6 @@
 		9F2D133D233A8F15009C474D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D133C233A8F15009C474D /* Assets.xcassets */; };
 		9F2D1340233A8F15009C474D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D133E233A8F15009C474D /* LaunchScreen.storyboard */; };
 		9F2D1348233A8F78009C474D /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D1347233A8F78009C474D /* Photos.swift */; };
-		9F2D134A233A8FEB009C474D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D1349233A8FEB009C474D /* EndPoint.swift */; };
 		9F2D134C233A91BC009C474D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D134B233A91BC009C474D /* TableViewController.swift */; };
 		9F2D134E233A940D009C474D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D134D233A940D009C474D /* TableViewCell.swift */; };
 		9F2D1352233A99D4009C474D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D1351233A99D4009C474D /* DetailViewController.swift */; };
@@ -28,7 +27,6 @@
 		9F2D133F233A8F15009C474D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F2D1341233A8F15009C474D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F2D1347233A8F78009C474D /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
-		9F2D1349233A8FEB009C474D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		9F2D134B233A91BC009C474D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9F2D134D233A940D009C474D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9F2D1351233A99D4009C474D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -64,19 +62,42 @@
 		9F2D1332233A8F0E009C474D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				9F2D1355233AA3FD009C474D /* Views */,
+				9F2D1354233AA3EB009C474D /* Controllers */,
+				9F2D1353233AA3DB009C474D /* Model */,
 				9F2D1333233A8F0E009C474D /* AppDelegate.swift */,
 				9F2D1335233A8F0E009C474D /* SceneDelegate.swift */,
 				9F2D1339233A8F0E009C474D /* Main.storyboard */,
 				9F2D133C233A8F15009C474D /* Assets.xcassets */,
 				9F2D133E233A8F15009C474D /* LaunchScreen.storyboard */,
 				9F2D1341233A8F15009C474D /* Info.plist */,
-				9F2D1347233A8F78009C474D /* Photos.swift */,
-				9F2D1349233A8FEB009C474D /* EndPoint.swift */,
-				9F2D134B233A91BC009C474D /* TableViewController.swift */,
-				9F2D134D233A940D009C474D /* TableViewCell.swift */,
-				9F2D1351233A99D4009C474D /* DetailViewController.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		9F2D1353233AA3DB009C474D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F2D1347233A8F78009C474D /* Photos.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F2D1354233AA3EB009C474D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F2D134B233A91BC009C474D /* TableViewController.swift */,
+				9F2D1351233A99D4009C474D /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F2D1355233AA3FD009C474D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F2D134D233A940D009C474D /* TableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +173,6 @@
 			files = (
 				9F2D1348233A8F78009C474D /* Photos.swift in Sources */,
 				9F2D134C233A91BC009C474D /* TableViewController.swift in Sources */,
-				9F2D134A233A8FEB009C474D /* EndPoint.swift in Sources */,
 				9F2D1334233A8F0E009C474D /* AppDelegate.swift in Sources */,
 				9F2D134E233A940D009C474D /* TableViewCell.swift in Sources */,
 				9F2D1336233A8F0E009C474D /* SceneDelegate.swift in Sources */,
